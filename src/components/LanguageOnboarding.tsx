@@ -1,5 +1,4 @@
 import { AppLogo } from '@/components/AppLogo'
-import { Button } from '@/components/ui/button'
 import { LANG_META, LANGUES } from '@/constants/langues'
 import { cn } from '@/lib/utils'
 import { usePresences } from '@/store/usePresences'
@@ -21,31 +20,36 @@ export function LanguageOnboarding() {
         Scegli la lingua · اختار اللغة
       </p>
 
-      <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
+      <div className="mt-8 grid w-full max-w-sm grid-cols-1 gap-4 sm:max-w-md sm:grid-cols-2">
         {LANGUES.map((code) => {
           const meta = LANG_META[code]
+          const description = code === 'ar' ? meta.descriptionAr : meta.descriptionIt
+
           return (
-            <Button
+            <button
               key={code}
               type="button"
-              variant="outline"
-              size="lg"
-              className={cn(
-                'h-auto flex-col items-start gap-1 rounded-3xl px-5 py-4 text-start',
-                'border-border bg-card hover:bg-accent/50',
-              )}
               onClick={() => choose(code)}
+              className={cn(
+                'flex min-h-[9.5rem] flex-col items-center justify-center gap-2.5 rounded-4xl',
+                'border border-border bg-card px-4 py-6 text-center shadow-md',
+                'ring-1 ring-foreground/5 transition-all duration-200',
+                'hover:border-primary/40 hover:bg-primary/5 hover:shadow-lg active:scale-[0.98]',
+              )}
             >
-              <span className="flex w-full items-center gap-3">
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">
-                  {meta.code}
-                </span>
-                <span className="text-base font-semibold" dir={code === 'ar' ? 'rtl' : 'ltr'}>
-                  {meta.label}
-                </span>
+              <span className="flex size-11 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                {meta.code}
               </span>
-              <span className="ps-12 text-xs text-muted-foreground">{meta.descriptionIt}</span>
-            </Button>
+              <span
+                className="text-base font-semibold leading-snug text-foreground"
+                dir={code === 'ar' ? 'rtl' : 'ltr'}
+              >
+                {meta.label}
+              </span>
+              <span className="max-w-[11rem] text-xs leading-relaxed text-muted-foreground">
+                {description}
+              </span>
+            </button>
           )
         })}
       </div>
