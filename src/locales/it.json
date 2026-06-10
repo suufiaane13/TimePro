@@ -1,0 +1,101 @@
+{
+  "app": {
+    "name": "TimePro",
+    "subtitle": "Registro presenze"
+  },
+  "nav": {
+    "label": "Navigazione principale",
+    "saisie": "Saisie",
+    "calendrier": "Calendario",
+    "dashboard": "Dashboard",
+    "export": "Export",
+    "parametres": "Impostazioni"
+  },
+  "saisie": {
+    "title": "Saisie giornaliera",
+    "matin": "Mattina",
+    "pm": "Pomeriggio",
+    "entree": "Entrata",
+    "sortie": "Uscita",
+    "travaillees": "Ore lavorate",
+    "normales": "Ore normali",
+    "extra": "Ore straordinarie",
+    "effacer": "Cancella giornata",
+    "sauvegarder": "Salva",
+    "erreurCreneau": "L'uscita deve essere dopo l'entrata",
+    "dimancheDesactive": "La domenica non è abilitata",
+    "dimancheDesactiveHint": "Attiva « Abilita domenica » in Impostazioni per inserire le ore della domenica.",
+    "jourCourant": "Giorno corrente",
+    "jourPrecedent": "Giorno precedente",
+    "jourSuivant": "Giorno successivo"
+  },
+  "calendrier": {
+    "title": "Calendario mensile",
+    "moisCourant": "Mese corrente"
+  },
+  "dashboard": {
+    "title": "Riepilogo mensile",
+    "travaillees": "Ore lavorate",
+    "normales": "Ore normali",
+    "extra": "Ore straordinarie",
+    "joursTravailles": "Giorni lavorati",
+    "samedis": "Sabati lavorati",
+    "joursExtra": "Giorni con extra",
+    "graphique": "Ore per settimana"
+  },
+  "export": {
+    "title": "Esporta dati",
+    "xlsx": "Esporta Excel (.xlsx)",
+    "xlsxDesc": "REGISTRO PRESENZE E ORE STRAORDINARIE",
+    "succes": "File esportato con successo",
+    "erreur": "Errore durante l'esportazione",
+    "vide": "Nessun dato da esportare per questo mese",
+    "lignes": "righe"
+  },
+  "parametres": {
+    "title": "Profilo dipendente",
+    "subtitle": "Informazioni usate per calcoli ed export",
+    "identite": "Dati personali",
+    "nom": "Cognome",
+    "prenom": "Nome",
+    "pays": "Nazione",
+    "horaire": "Orario di riferimento",
+    "debutMatin": "Inizio mattina",
+    "finMatin": "Fine mattina",
+    "debutPm": "Inizio pomeriggio",
+    "finPm": "Fine pomeriggio",
+    "dimanche": "Abilita domenica",
+    "dimancheDesc": "Include le ore del lavoro domenicale nel calcolo",
+    "horaireInvalide": "La fine deve essere dopo l'inizio per ogni fascia oraria",
+    "theme": "Aspetto",
+    "themeDesc": "Scegli tema chiaro, scuro o automatico",
+    "privacy": "I tuoi dati restano solo su questo dispositivo."
+  },
+  "theme": {
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema",
+    "toggle": "Cambia tema"
+  },
+  "langue": {
+    "label": "Lingua",
+    "it": "Italiano",
+    "ar": "الدارجة المغربية"
+  },
+  "common": {
+    "sauvegarde": "Salvato",
+    "erreur": "Errore",
+    "loading": "Caricamento",
+    "moisPrecedent": "Mese precedente",
+    "moisSuivant": "Mese successivo",
+    "sansDonnees": "Nessun dato",
+    "storageFull": "Memoria locale piena — libera spazio sul dispositivo",
+    "storageError": "Impossibile salvare i dati localmente",
+    "storageCorrupt": "Dati locali danneggiati — profilo reimpostato"
+  },
+  "error": {
+    "title": "Si è verificato un errore",
+    "message": "Ricarica l'applicazione per continuare.",
+    "reload": "Ricarica"
+  }
+}

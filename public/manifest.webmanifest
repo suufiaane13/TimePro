@@ -1,0 +1,24 @@
+{
+  "name": "TimePro",
+  "short_name": "TimePro",
+  "description": "Registro presenze e ore straordinarie",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#C00000",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-d.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
