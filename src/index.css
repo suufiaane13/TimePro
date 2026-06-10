@@ -43,6 +43,10 @@
   --sidebar-accent-foreground: oklch(0.25 0.02 30);
   --sidebar-border: oklch(0.9 0.01 106);
   --sidebar-ring: oklch(0.48 0.194 27.7);
+  --scrollbar-size: 8px;
+  --scrollbar-track: color-mix(in oklch, var(--primary) 12%, var(--background));
+  --scrollbar-thumb: color-mix(in oklch, var(--primary) 72%, white 5%);
+  --scrollbar-thumb-hover: var(--primary);
 }
 
 .dark {
@@ -81,6 +85,9 @@
   --sidebar-accent-foreground: oklch(0.95 0.005 106);
   --sidebar-border: oklch(0.3 0.015 30);
   --sidebar-ring: oklch(0.62 0.194 27.7);
+  --scrollbar-track: color-mix(in oklch, var(--primary) 18%, var(--background));
+  --scrollbar-thumb: color-mix(in oklch, var(--primary) 80%, black 5%);
+  --scrollbar-thumb-hover: var(--primary);
 }
 
 @theme inline {
@@ -134,6 +141,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
     @apply font-sans;
   }
@@ -143,6 +151,42 @@
   #root {
     @apply min-h-svh;
   }
+}
+
+/* Scrollbar rouge TimePro — hors @layer pour priorité maximale */
+.app-scroll,
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.app-scroll::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+.app-scroll::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 9999px;
+}
+
+.app-scroll::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  min-height: 2.5rem;
+}
+
+.app-scroll::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+.app-scroll::-webkit-scrollbar-corner,
+html::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 html.no-theme-transition,
@@ -257,5 +301,9 @@ html.no-theme-transition *::after {
   html,
   body {
     transition: none;
+  }
+
+  * {
+    scrollbar-width: auto;
   }
 }

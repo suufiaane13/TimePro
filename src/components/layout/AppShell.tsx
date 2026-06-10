@@ -52,7 +52,7 @@ export function AppShell() {
         </div>
       </header>
 
-      <main className="flex-1 overflow-y-auto px-4 py-4 pb-24">
+      <main className="app-scroll flex-1 overflow-y-scroll px-4 py-4 pb-24">
         <AnimatedOutlet />
       </main>
 
